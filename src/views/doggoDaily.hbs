@@ -1,1 +1,24 @@
-
+<table>
+    
+    <tr>
+        <form action="/insertDD" method="post">
+         When did the Dog peed?  <input type="text" name="whenPeed" id="">
+         When did the dog pooped?  <input type="text" name="whenPooped" id="">
+         When did the dog ate? <input type="text" name="whenAte" id="">
+         When was the last walk?<input type="text" name="whenWalk" id="">
+         Add other info: <input type="text" name="otherInfo" id="">
+         <input type="hidden" name="user_id" value="{{id}}">
+           <input type="submit" value="Submit bitch">
+        </form>
+    </tr>
+    {{#each doggos}}
+    <tr>
+        <td> Pepi:{{pepi}} </td> 
+       <td> Poop: {{poop}} </td>
+       <td>eat: {{eat}}</td>
+       <td>walk: {{walk}}</td>
+       <td>other: {{other}}</td>
+       
+    </tr>
+    {{/each}}
+</table>
