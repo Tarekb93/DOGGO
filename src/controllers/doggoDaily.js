@@ -12,23 +12,30 @@ const { response } = require("express");
 
 exports.results = (req, res) => {
   model.fetchDoggoDaily().then((result) => {
-    res.render("doggoDaily", {
-      doggos: result,
-    });
+    return res.redirect("/user/" + res.locals.id);
   });
 };
 
 exports.resultsById = (req, res) => {
   const routeId = req.params.id;
+  console.log(req.params, "param", req.params.id);
+  // console.log(req.locals, "local", req.locals.id);
   if (+routeId !== res.locals.id) {
     return res.redirect("/user/" + res.locals.id);
   }
+  console.log(res.locals, "local", res.locals.id);
   const user = res.locals.user;
   model.fetchDoggoDaily(routeId).then((result) => {
-    res.render("doggoDaily", {
-      doggos: result,
-      id: routeId,
-      title: user,
+    model.getUser(user).then((resultt) => {
+      console.log(resultt, "resultt");
+
+      res.render("doggoDaily", {
+        doggos: result,
+        id: routeId,
+        dogname: resultt.dogname,
+        title: "Hello " + user,
+      });
+      console.log(result);
     });
   });
 };

@@ -8,7 +8,7 @@ exports.loginPage = (req, res) => {
 };
 
 exports.registerPage = (req, res) => {
-  res.render("doggoProfile", { activePage: { register: true } });
+  res.render("registerR", { activePage: { register: true } });
 };
 
 exports.login = async (req, res) => {
@@ -41,9 +41,15 @@ exports.register = async (req, res) => {
       location: req.body.location,
     };
     const resultt = await model.createUser(data);
+    console.log(resultt.rows[0].id);
+    const token = jwt.sign(
+      { username: req.body.username, id: resultt.rows[0].id },
+      process.env.JWT_SECRET
+    );
+    res.cookie("access_token", token, { HttpOnly: true });
     res.redirect("/user/" + resultt.rows[0].id);
   } catch (err) {
-    res.render("doggoProfile", { error: err.message });
+    res.render("registerR", { error: err.message });
   }
 };
 

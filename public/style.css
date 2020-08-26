@@ -1,32 +1,92 @@
-/* body {
-  margin: 200px;
-  padding: 200px;
+* {
+  margin: 0;
+  padding: 0;
   font-family: "Lucida Sans";
-  position: fixed;
-} */
-
-/* .Dtitle {
-  margin: 50px;
-} */
-
-.form_H {
-  width: 430px;
-  height: 250px;
-  margin: 10% auto;
-  background: blue;
-  padding: 10px;
+}
+body {
+  /* padding: 100px; */
+  font-family: "Lucida Sans";
+  position: absolute;
+  background-color: brown;
+  align-items: center;
+  align-self: center;
+  background-image: url("/image/DoggoCover.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  /* font-size: 25px; */
+}
+.homeButn {
+  background-color: lawngreen;
+  border-radius: 30%;
+  padding: 3px;
+  font-size: 25px;
+}
+.logOutBut {
+  background-color: orangered;
+  /* border-radius: 30%;
+ width: 85%;  */
+  padding: 3px;
+  border: 5px;
+  outline: none;
   border-radius: 30px;
-  justify-content: baseline;
-  justify-items: center;
+  font-size: 25px;
 }
-
-.usernameH,
-.passwordH,
-.submitH {
-  /* justify-content: end; */
-}
-
-.links {
+.dailyForm {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+}
+.dailyDoggos {
+  display: flex;
+  justify-content: space-between;
+}
+.homeIntro {
+  width: 392px;
+  height: 395px;
+  position: relative;
+
+  margin: 49% 180%;
+  background: darksalmon;
+  padding: 5px;
+  overflow: hidden;
+  border-radius: 30px;
+}
+
+.title {
+  margin: 100px;
+  background-color: blue;
+  text-align: center;
+  border-radius: 35%;
+  padding: 10px;
+}
+.dailyTable {
+  background-color: gold;
+  font-size: 25px;
+}
+
+.registerHeader {
+  display: flex;
+  background-color: white;
+  text-align: center;
+  width: 100%;
+}
+.homeDogDa {
+  font-size: 25px;
+}
+.homeLgut {
+  font-size: 25px;
+}
+
+.registerForm {
+  display: flex;
+  flex-direction: column;
+  background-color: darksalmon;
+  margin: 100% 320%;
+  width: 250px;
+  height: auto;
+}
+.regHomeBut {
+  display: flex;
+  background-color: white;
 }

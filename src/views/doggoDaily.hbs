@@ -1,20 +1,24 @@
+<div class="DailyPg">
 {{> header }}
-
-<table>
+<a href="/" class="homeButn">Home</a> 
+<a href="/logout" class="logOutBut">logout</a>
+<table class="dailyTable">
     
-    <tr>
-        <form action="/insertDD" method="post">
-         When did the Dog peed?  <input type="text" name="whenPeed" id="">
-         When did the dog pooped?  <input type="text" name="whenPooped" id="">
-         When did the dog ate? <input type="text" name="whenAte" id="">
-         When was the last walk?<input type="text" name="whenWalk" id="">
-         Add other info: <input type="text" name="otherInfo" id="">
-         <input type="hidden" name="user_id" value="{{id}}">
-           <input type="submit" value="Submit bitch">
-        </form>
+    <tr class="dailyForm">
+        <td>
+            <form action="/insertDD" method="post">
+            Last time {{dogname}} peed?  <input type="text" name="whenPeed" id="">
+            Last time {{dogname}} pooped?  <input type="text" name="whenPooped" id="">
+            Last time {{dogname}} ate? <input type="text" name="whenAte" id="">
+            Last walk for {{dogname}}?<input type="text" name="whenWalk" id="">
+            Other info: <input type="text" name="otherInfo" id="">
+            <input type="hidden" name="user_id" value="{{id}}">
+            <input type="submit" value="Submit bitch">
+            </form>
+        </td>
     </tr>
     {{#each doggos}}
-    <tr>
+    <tr class="dailyDoggos">
         <td> Pepi:{{pepi}} </td> 
        <td> Poop: {{poop}} </td>
        <td>eat: {{eat}}</td>
@@ -24,3 +28,4 @@
     </tr>
     {{/each}}
 </table>
+</div>

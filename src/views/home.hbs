@@ -1,18 +1,18 @@
-{{username}}
+<div class="homeIntro">
 {{#if signedIn}}
 {{> header }}
 
-<a href="./doggoDaily">Doggo Daily</a> 
-<a href="/logout">logout</a>
+<a href="./doggoDaily" class="homeDogDa">Doggo Daily</a> 
+<a href="/logout" class="homeLgut">logout</a>
 
 
 
 
 {{else}}
+<h1 class="title">{{title}}</h1>
+<a href="./registerR">Sign Up</a>
 
-<a href="./doggoProfile">Sign Up</a>
-
-<form action="/login" method="post">
+<form action="/login" method="post" class="homeForm">
 <input type="text" name="username" placeholder="Insert username">
 <input type="password" name="password" placeholder="Insert password">
 <input type="submit" value="Log In">
@@ -20,3 +20,4 @@
 </form>
 
 {{/if}}
+</div>
