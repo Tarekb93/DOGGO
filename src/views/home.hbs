@@ -1,9 +1,22 @@
+{{username}}
+{{#if signedIn}}
 {{> header }}
-<a href="./doggoProfile">Sign Up</a>
+
 <a href="./doggoDaily">Doggo Daily</a> 
+<a href="/logout">logout</a>
+
+
+
+
+{{else}}
+
+<a href="./doggoProfile">Sign Up</a>
 
 <form action="/login" method="post">
 <input type="text" name="username" placeholder="Insert username">
-<input type="text" name="password" placeholder="Insert password">
+<input type="password" name="password" placeholder="Insert password">
 <input type="submit" value="Log In">
+{{error}}
 </form>
+
+{{/if}}

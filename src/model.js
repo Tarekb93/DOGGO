@@ -37,19 +37,14 @@ function insertDoggoDaily(data) {
   );
 }
 
-function login(user) {
-  return db
-    .query("Select * FROM users WHERE username=$1 AND password=$2 ", [
-      user.username,
-      user.password,
-    ])
-    .then((result) => {
-      if (result.rows.length === 0) {
-        result.rows;
-      } else {
-        return result.rows[0];
-      }
-    });
+async function getUser(username) {
+  const result = await db.query("Select * FROM users WHERE username=$1 ", [
+    username,
+  ]);
+
+  if (result.rows.length === 0) throw new Error("user not found");
+
+  return result.rows[0];
 }
 
-module.exports = { createUser, fetchDoggoDaily, insertDoggoDaily, login };
+module.exports = { createUser, fetchDoggoDaily, insertDoggoDaily, getUser };
