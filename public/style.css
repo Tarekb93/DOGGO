@@ -1,0 +1,32 @@
+/* body {
+  margin: 200px;
+  padding: 200px;
+  font-family: "Lucida Sans";
+  position: fixed;
+} */
+
+/* .Dtitle {
+  margin: 50px;
+} */
+
+.form_H {
+  width: 430px;
+  height: 250px;
+  margin: 10% auto;
+  background: blue;
+  padding: 10px;
+  border-radius: 30px;
+  justify-content: baseline;
+  justify-items: center;
+}
+
+.usernameH,
+.passwordH,
+.submitH {
+  /* justify-content: end; */
+}
+
+.links {
+  display: flex;
+  justify-content: flex-end;
+}
