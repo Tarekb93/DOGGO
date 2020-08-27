@@ -8,7 +8,7 @@ CREATE TABLE users (
   age INTEGER,
   password VARCHAR(255),
   -- confirmPassword VARCHAR(255),
-  dogname VARCHAR(255) VARCHAR(255) NOT NULL,
+  dogname VARCHAR(255) NOT NULL,
   location VARCHAR(255)
 );
 
