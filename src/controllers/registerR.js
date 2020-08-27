@@ -1,3 +1,5 @@
 module.exports = (req, res) => {
-  res.render("registerR");
+  res.render("registerR", {
+    registerr: true,
+  });
 };

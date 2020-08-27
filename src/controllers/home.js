@@ -5,7 +5,6 @@ exports.get = (req, res) => {
     title: "DOGGO",
     signedIn: res.locals.authenticated,
     username: res.locals.user,
-    activePage: { home: true },
+    homee: true,
   });
 };
-

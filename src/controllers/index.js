@@ -3,14 +3,14 @@ const router = express.Router();
 
 const home = require("./home");
 const auth = require("./auth");
-const r = require("./registerR");
+const register = require("./registerR");
 const resultsBy = require("./doggoDaily");
 const { authC, requireLogin, notLogin } = require("../middlewares");
 router.use(authC);
 
 router.get("/", home.get);
 
-router.get("/registerR", notLogin, r);
+router.get("/registerR", notLogin, register);
 
 router.get("/doggoDaily", requireLogin, resultsBy.results);
 

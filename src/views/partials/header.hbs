@@ -1,4 +1,20 @@
+
+
+{{#if registerr}}
+<h1 class="registerHeader">Register</h1>}}
+<a href="/" class="regHomeBut">Home</a>
+{{/if}}
+
+{{#if homee}}
 <header>
   <h1 class="title">{{title}}
   <p>Hello {{username}}!</p></h1>
 </header>
+<a href="./doggoDaily" class="homeDogDa">Doggo Daily</a> 
+<a href="/logout" class="homeLgut">logout</a>
+{{/if}}
+
+{{#if doggoDa}}
+<a href="/" class="homeButn">Home</a> 
+<a href="/logout" class="logOutBut">logout</a>
+{{/if}}
